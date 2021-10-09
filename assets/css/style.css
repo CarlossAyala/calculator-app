@@ -57,7 +57,6 @@
   padding: 5px;
   border-radius: 50%;
 }
-.header .shadow:active,
 .header .shadow:hover{
   background-color: #e6e7e8;
 }
@@ -124,7 +123,6 @@
   cursor: pointer;
   transition: background-color 0.5s;
 }
-.keyboard td:active,
 .keyboard td:hover{
   background-color: #e6e7e8;
 }
@@ -164,7 +162,6 @@
 .theme-dark .header{
   color: #fff;
 }
-.theme-dark .header .shadow:active,
 .theme-dark .header .shadow:hover{
   color: #000;
 }
@@ -183,18 +180,14 @@
   background-color: #6C807E;
   color: #fff;
 }
-.theme-dark .keyboard td:not(.box-theme-dark):active,
 .theme-dark .keyboard td:not(.box-theme-dark):hover{
   background-color: #6C807E;
 }
 .theme-dark .box-theme-dark,
-.theme-dark .box-theme-dark:hover,
-.theme-dark .box-theme-dark:active{
+.theme-dark .box-theme-dark:hover{
   background-color: #fff;
 }
 .theme-dark .cl-back:hover,
-.theme-dark .cl-back:active,
-.theme-dark .box-theme-dark:hover,
-.theme-dark .box-theme-dark:active{
+.theme-dark .box-theme-dark:hover{
   box-shadow: 1px 1px 10px #fff;
 }
