@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 html,
 body {
