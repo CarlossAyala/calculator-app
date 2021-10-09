@@ -17,10 +17,24 @@
         <span>9:41</span>
         <i class='bx bxs-battery'></i>
       </div>
+      <div class="history">
+        <div class="history-header">
+          <i id="clear-h" title="Clear history" class='bx bx-trash-alt shadow'></i>
+          <span>History</span>
+          <i id="close-h" title="Close history" class='bx bx-chevron-up shadow'></i>
+        </div>
+        <div class="history-container">
+          <div class="history-container--item">
+            <span class="container-date">Today</span>
+            <span class="container-operation">2+2</span>
+            <span class="container-result">4</span>
+          </div>
+        </div>
+      </div>
       <div class="header">
         <i id="theme" title="Theme Light" class='bx bx-sun shadow'></i>
         <span class="title">Calculator</span>
-        <i title="History" class='bx bx-menu-alt-right shadow'></i>
+        <i id="open-h" title="History" class='bx bx-history shadow'></i>
       </div>
       <div class="main">
         <div class="screen">
@@ -31,7 +45,7 @@
           <table>
             <tbody>
               <tr>
-                <td class="ac cl-back">AC</td>
+                <td class="ac cl-back" translate="no">AC</td>
                 <td class="cl-back">
                   <svg xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" 
@@ -98,7 +112,6 @@
                 </td>
               </tr>
               <tr>
-                <td></td>
                 <td>0</td>
                 <td>.</td>
                 <td class="cl-lightblue box-theme-dark"> <strong>=</strong></td>
