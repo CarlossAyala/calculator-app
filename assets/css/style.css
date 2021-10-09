@@ -6,14 +6,15 @@
 }
 .container{
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
   background-color: #ffffff;
   background-image: linear-gradient(315deg, #ffffff 0%, #3a9889 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow-y: hidden;
   transition: background-image 0.3s;
 }
 .phone{
