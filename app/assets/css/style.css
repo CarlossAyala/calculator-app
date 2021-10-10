@@ -213,7 +213,7 @@ body {
   color: #3a9889;
 }
 
-/* Modo Oscuro */
+/* Theme Dark */
 .gradient-dark {
   background-color: #ffffff;
   background-image: linear-gradient(135deg, #ffffff 0%, #283637 100%);

@@ -1,24 +1,24 @@
-const path = require("path");
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   // APP ENTRY POINT
-  entry: path.join(__dirname, "src", "index.js"),
+  entry: path.join(__dirname, 'src', 'index.js'),
 
   // OUTPUT DIRECTORY
   output: {
-    path: path.join(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.join(__dirname, 'dist'),
+    filename: 'bundle.js',
   },
   // EVIROMENT MODE
-  mode: process.env.NODE_ENV || "development",
+  mode: process.env.NODE_ENV || 'development',
   // PATH RESOLVE
   resolve: {
     extensions: ['.js', '.jsx'],
-    modules: [path.resolve(__dirname, "src"), "node_modules"],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
   module: {
     rules: [
@@ -26,12 +26,12 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
       {
         test: /\.css$/i,
-        use: [ MiniCssExtractPlugin.loader, "css-loader" ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
@@ -40,20 +40,21 @@ module.exports = {
       inject: 'body',
       template: './public/index.html',
       filename: './index.html',
+      favicon: path.resolve(__dirname, 'src', 'assets/icon-page.png'),
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
   ],
   optimization: {
     minimize: true,
     minimizer: [
       new CssMinimizerPlugin(),
-      new TerserPlugin()
+      new TerserPlugin(),
     ],
   },
   // DEV SERVER ENTRY POINT
   devServer: {
     static: {
-      directory: path.join(__dirname, "src"),
+      directory: path.join(__dirname, 'src'),
     },
     open: true,
     port: 3005,

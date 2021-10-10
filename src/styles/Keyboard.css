@@ -1,0 +1,73 @@
+/* Tabla */
+.keyboard {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  color: #7a7a7a;
+}
+.keyboard table {
+  width: 100%;
+  height: 100%;
+}
+.keyboard tr {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.keyboard tr:last-child {
+  margin-bottom: 0px;
+}
+.keyboard td {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.keyboard td:hover {
+  background-color: #e6e7e8;
+}
+.keyboard td:last-child {
+  margin-right: 0px;
+}
+.box-theme-dark {
+  transition: box-shadow 0.3s;
+}
+.icon {
+  width: 22px;
+}
+.ac {
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 7px;
+}
+.cl-back {
+  color: #35343a;
+  transition: box-shadow 0.3s;
+}
+.cl-lightblue {
+  color: #3a9889;
+}
+
+/* Theme Dark */
+.theme-dark .keyboard {
+  color: #fff;
+}
+.theme-dark .cl-back {
+  background-color: #6c807e;
+  color: #fff;
+}
+.theme-dark .keyboard td:not(.box-theme-dark):hover {
+  background-color: #6c807e;
+}
+.theme-dark .box-theme-dark,
+.theme-dark .box-theme-dark:hover {
+  background-color: #fff;
+}
+.theme-dark .cl-back:hover,
+.theme-dark .box-theme-dark:hover {
+  box-shadow: 1px 1px 10px #fff;
+}

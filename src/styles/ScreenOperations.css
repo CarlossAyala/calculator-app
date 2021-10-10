@@ -1,0 +1,29 @@
+.screen {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  padding: 0 7px;
+}
+.operation {
+  font-size: 15px;
+  color: #7a7a7a;
+  width: 100%;
+  font-weight: 400;
+}
+.result {
+  margin-top: 10px;
+  font-size: 48px;
+  width: 100%;
+  font-weight: 400;
+}
+
+/* Theme Dark */
+.theme-dark .operation {
+  color: #ccc5b9;
+}
+.theme-dark .result {
+  color: #fff;
+}

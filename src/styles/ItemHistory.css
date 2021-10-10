@@ -1,0 +1,43 @@
+.history-container--item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: flex-end;
+  border-radius: 5px;
+}
+.history-container--item:hover{
+  background-color: #e6e7e8;
+  cursor: pointer;
+}
+.container-date{
+  align-self: flex-start;
+  color: #3a9889;
+  font-size: 18px;
+}
+.container-operation {
+  color: #7a7a7a;
+  font-size: 25px;
+}
+.container-result {
+  font-size: 22px;
+}
+.history-container--item:last-child {
+  margin-bottom: 0;
+}
+
+/* Theme Dark */
+.theme-dark .container-result{
+  color: #fff;
+}
+.theme-dark .container-date {
+  font-weight: 400;
+}
+.theme-dark .container-date {
+  font-weight: 400;
+}
+.theme-dark .container-operation{
+  color: rgba(255, 255, 255, 0.6);
+}
+.theme-dark .history-container--item:hover{
+  background-color: rgba(230, 231, 232, 0.1);
+}

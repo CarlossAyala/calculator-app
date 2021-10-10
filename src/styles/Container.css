@@ -1,0 +1,42 @@
+.container {
+  width: 100vw;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #3a9889 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background-image 0.3s;
+}
+.phone {
+  width: 280px;
+  height: 570px;
+  padding: 0 12px;
+  position: relative;
+  border-radius: 25px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(40, 54, 55, 0.4);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(40, 54, 55, 0.4);
+  box-shadow: 0px 0px 20px 0px rgba(40, 54, 55, 0.4);
+  transition: background-color 0.3s;
+}
+.navigation-button {
+  width: 100px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #bcbcbc;
+  position: relative;
+  top: -10px;
+  cursor: pointer;
+}
+
+/* Theme Dark */
+.gradient-dark {
+  background-color: #ffffff;
+  background-image: linear-gradient(135deg, #ffffff 0%, #283637 100%);
+}
+.theme-dark {
+  background-color: #283637;
+}
