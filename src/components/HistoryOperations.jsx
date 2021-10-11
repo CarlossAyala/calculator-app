@@ -1,14 +1,13 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
-import getOperationsLocalStorage from '../utils/getOperationsLocalStorage';
+/* import getOperationsLocalStorage from '../utils/getOperationsLocalStorage'; */
 import MessageEmptyHistory from './MessageEmptyHistory';
 import ItemsHistory from './ItemsHistory';
-/* import clearLocalStorage from '../utils/clearLocalStorage'; */
+import clearLocalStorage from '../utils/clearLocalStorage';
 import '../styles/HistoryOperations.css';
 
-const HistoryOperations = () => {
-  const operationsLocalStorage = getOperationsLocalStorage();
-  const nameClass = operationsLocalStorage.length > 0 ? 'history-container' : 'history-container empty-h';
+const HistoryOperations = ({ history, setHistory }) => {
+  const nameClass = history.length > 0 ? 'history-container' : 'history-container empty-h';
 
   function closeHistory() {
     const containerHistory = document.querySelector('.history');
@@ -16,8 +15,8 @@ const HistoryOperations = () => {
     containerHistory.classList.remove('open-history');
   }
   function clearHistory() {
-    //clearLocalStorage();
-    alert('No disponible aún');
+    setHistory([]);
+    clearLocalStorage();
   }
   return (
     <div className='history'>
@@ -28,7 +27,7 @@ const HistoryOperations = () => {
       </div>
       <div className={nameClass}>
         {
-          operationsLocalStorage.length > 0 ? <ItemsHistory operations={operationsLocalStorage} /> : <MessageEmptyHistory />
+          history.length > 0 ? <ItemsHistory operations={history} /> : <MessageEmptyHistory />
         }
       </div>
     </div>

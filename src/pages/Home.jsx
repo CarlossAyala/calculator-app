@@ -1,24 +1,31 @@
 /* eslint-disable radix */
 /* eslint-disable no-eval */
 /* eslint-disable react/jsx-no-bind */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import StatusBar from '../components/StatusBar';
 import HistoryOperations from '../components/HistoryOperations';
 import HeaderInfo from '../components/HeaderInfo';
 import Keyboard from '../components/Keyboard';
 import ScreenOperations from '../components/ScreenOperations';
-import saveInLocalStorage from '../utils/saveInLocalStorage';
+import saveOperation from '../utils/saveOperation';
 import '../styles/Container.css';
+import getOperationsLocalStorage from '../utils/getOperationsLocalStorage';
 
 const Home = () => {
   const [result, setResult] = useState('');
   const [operation, setOperation] = useState('');
+  const [history, setHistory] = useState([]);
+
+  //Checkear datos del Local Storage
+  useEffect(() => {
+    const operationsLocalStorage = getOperationsLocalStorage();
+    setHistory(operationsLocalStorage);
+  }, []);
 
   function resultOperation() {
     setResult(`${eval(operation)}`);
     if (operation !== '') {
-      //Guardar en el LocalStorag
-      saveInLocalStorage(operation);
+      saveOperation(operation, history, setHistory);
     }
   }
   function reset() {
@@ -56,7 +63,7 @@ const Home = () => {
     <div className='container'>
       <div className='phone'>
         <StatusBar />
-        <HistoryOperations />
+        <HistoryOperations history={history} setHistory={setHistory} />
         <HeaderInfo />
         <div className='main'>
           <ScreenOperations result={result} operation={operation} />

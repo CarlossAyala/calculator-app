@@ -1,7 +1,7 @@
 /* eslint-disable no-eval */
 import getOperationsLocalStorage from './getOperationsLocalStorage';
 
-function saveInLocalStorage(operation) {
+function saveOperation(operation, history, setHistory) {
   //Formato de fecha
   const date = new Date();
 
@@ -14,12 +14,15 @@ function saveInLocalStorage(operation) {
     hour: `${date.getHours()}:${date.getMinutes()}`,
   };
 
-  //Guardar datos
+  //Guardar datos en el Local Storage
   const operations = getOperationsLocalStorage();
   //Añadir la nueva Operacion
   operations.push(recordOfOperation);
   //Convertir de String a arreglo para localStorage
   localStorage.setItem('operations', JSON.stringify(operations));
+
+  //Actulizar estado del Historial
+  setHistory(history.concat(recordOfOperation));
 }
 
-export default saveInLocalStorage;
+export default saveOperation;
