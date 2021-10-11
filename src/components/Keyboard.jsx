@@ -1,16 +1,17 @@
 import React from 'react';
 import '../styles/Keyboard.css';
 
-const Keyboard = () => {
+const Keyboard = ({ handleOnClick }) => {
+/*   onClick={(e) => handleOnClick(e.target.innerHTML)}*/
   return (
     <div className='keyboard'>
       <table>
         <tbody>
           <tr>
-            <td className='ac cl-back' translate='no'>
+            <td className='ac cl-back' translate='no' onClick={(e) => handleOnClick('AC')}>
               AC
             </td>
-            <td className='cl-back'>
+            <td className='cl-back' onClick={() => handleOnClick('DEL')}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -26,23 +27,7 @@ const Keyboard = () => {
                 <line x1='12' y1='9' x2='18' y2='15' />
               </svg>
             </td>
-            <td className='box-theme-dark'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 24 24'
-                fill='none'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                className='icon cl-lightblue'
-              >
-                <line x1='19' y1='5' x2='5' y2='19' />
-                <circle cx='6.5' cy='6.5' r='2.5' />
-                <circle cx='17.5' cy='17.5' r='2.5' />
-              </svg>
-            </td>
-            <td className='box-theme-dark'>
+            <td className='box-theme-dark' onClick={() => handleOnClick('/')}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -58,12 +43,7 @@ const Keyboard = () => {
                 <circle cx='12' cy='18' r='2' />
               </svg>
             </td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td className='box-theme-dark'>
+            <td className='box-theme-dark' onClick={() => handleOnClick('*')}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -80,10 +60,10 @@ const Keyboard = () => {
             </td>
           </tr>
           <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td className='box-theme-dark'>
+            <td onClick={(e) => handleOnClick(e.target.innerHTML)}>7</td>
+            <td onClick={(e) => handleOnClick(e.target.innerHTML)}>8</td>
+            <td onClick={(e) => handleOnClick(e.target.innerHTML)}>9</td>
+            <td className='box-theme-dark' onClick={() => handleOnClick('-')}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -99,10 +79,10 @@ const Keyboard = () => {
             </td>
           </tr>
           <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td className='box-theme-dark'>
+            <td onClick={(e) => handleOnClick(e.target.innerHTML)}>4</td>
+            <td onClick={(e) => handleOnClick(e.target.innerHTML)}>5</td>
+            <td onClick={(e) => handleOnClick(e.target.innerHTML)}>6</td>
+            <td className='box-theme-dark' onClick={() => handleOnClick('+')}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -119,12 +99,16 @@ const Keyboard = () => {
             </td>
           </tr>
           <tr>
-            <td>0</td>
-            <td>.</td>
-            <td className='cl-lightblue box-theme-dark'>
-              {' '}
+            <td onClick={(e) => handleOnClick(e.target.innerHTML)}>1</td>
+            <td onClick={(e) => handleOnClick(e.target.innerHTML)}>2</td>
+            <td onClick={(e) => handleOnClick(e.target.innerHTML)}>3</td>
+            <td className='cl-lightblue box-theme-dark' onClick={() => handleOnClick('=')}>
               <strong>=</strong>
             </td>
+          </tr>
+          <tr>
+            <td onClick={(e) => handleOnClick(e.target.innerHTML)}>0</td>
+            <td onClick={(e) => handleOnClick('.')}>.</td>
           </tr>
         </tbody>
       </table>

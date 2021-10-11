@@ -6,7 +6,8 @@
   -webkit-tap-highlight-color: transparent;
 }
 html,
-body {
+body,
+#app{
   height: 100%;
 }
 

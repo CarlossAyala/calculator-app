@@ -16,6 +16,7 @@
 }
 .keyboard tr:last-child {
   margin-bottom: 0px;
+  justify-content: space-evenly;
 }
 .keyboard td {
   width: 50px;
