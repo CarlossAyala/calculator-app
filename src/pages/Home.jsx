@@ -60,18 +60,15 @@ const Home = () => {
   }
 
   return (
-    <div className='container'>
-      <div className='phone'>
-        <StatusBar />
-        <HistoryOperations history={history} setHistory={setHistory} />
-        <HeaderInfo />
-        <div className='main'>
-          <ScreenOperations result={result} operation={operation} />
-          <Keyboard handleOnClick={handleOnClick} />
-        </div>
+    <>
+      <StatusBar />
+      <HistoryOperations history={history} setHistory={setHistory} />
+      <HeaderInfo />
+      <div className='main'>
+        <ScreenOperations result={result} operation={operation} />
+        <Keyboard handleOnClick={handleOnClick} />
       </div>
-      <div className='navigation-button' />
-    </div>
+    </>
   );
 };
 

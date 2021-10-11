@@ -12,6 +12,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   // EVIROMENT MODE
   mode: process.env.NODE_ENV || 'development',
@@ -58,5 +59,6 @@ module.exports = {
     },
     open: true,
     port: 3005,
+    historyApiFallback: true,
   },
 };

@@ -1,0 +1,35 @@
+.not-found {
+  display: flex;
+  height: calc(100% - 60px);
+  flex-direction: column;
+}
+.not-found-header {
+  align-items: center;
+  color: #7a7a7a;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+}
+.not-found-header .title {
+  background-color: #3a9889;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+.msg-not-found {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  color: #7a7a7a;
+}
+.msg-not-found a {
+  text-decoration: none;
+}
+.msg-not-found .error {
+  margin-bottom: 5px;
+}
