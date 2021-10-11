@@ -48,7 +48,7 @@ const Home = () => {
       resultOperation();
     }
     //Verificar si es un número
-    const validateType = parseInt(type, 10);
+    const validateType = parseInt(type);
     if (!Number.isNaN(validateType)) setOperation(operation + type);
   }
 
