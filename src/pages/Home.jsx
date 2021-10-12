@@ -35,6 +35,10 @@ const Home = () => {
   function backspace() {
     setOperation(operation.slice(0, -1));
   }
+  function getOperationOfHistory(datos) {
+    setOperation(datos.operation);
+    setResult(datos.result);
+  }
 
   function handleOnClick(type) {
     //Permitir ingresar signos - Logica
@@ -62,7 +66,7 @@ const Home = () => {
   return (
     <>
       <StatusBar />
-      <HistoryOperations history={history} setHistory={setHistory} />
+      <HistoryOperations history={history} setHistory={setHistory} getOperationOfHistory={getOperationOfHistory} />
       <HeaderInfo />
       <div className='main'>
         <ScreenOperations result={result} operation={operation} />

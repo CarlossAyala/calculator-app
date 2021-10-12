@@ -1,3 +1,4 @@
+/* eslint-disable new-cap */
 /* eslint-disable no-eval */
 import getOperationsLocalStorage from './getOperationsLocalStorage';
 
@@ -12,6 +13,7 @@ function saveOperation(operation, history, setHistory) {
     result,
     date: new Intl.DateTimeFormat('es').format(date),
     hour: `${date.getHours()}:${date.getMinutes()}`,
+    id: Date.now(),
   };
 
   //Guardar datos en el Local Storage
