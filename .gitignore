@@ -209,6 +209,5 @@ $RECYCLE.BIN/
 .vscode
 
 # Cosas mias
-app/
 
 # End of https://www.toptal.com/developers/gitignore/api/node,windows,macos,linux,visualstudiocode
